@@ -1,0 +1,77 @@
+{
+    "name": "example_xapp",
+    "version": "1.0.0",
+    "vendor": "example_vendor",
+    "containers": [
+        {
+            "name": "example_container_1",
+            "image": {
+                "registry": "registry.cluster.local:5001",
+                "name": "examplexapp",
+                "tag": "1.0.0
+            }
+        }
+    ],
+    "messaging": {
+        "ports": [
+            {
+                "name": "http",
+                "container": "example_container_1",
+                "port": 8080,
+                "description": "HTTP service port for example container"
+            },
+            {
+                "name": "rmr-route",
+                "container": "example_container_1",
+                "port": 4561,
+                "description": "RMR route port for example container"
+            },
+            {
+                "name": "rmr-data",
+                "container": "example_container_1",
+                "port": 4560,
+                "rxMessages": [
+                  "RIC_INDICATION",
+                  "A1_POLICY_REQ"
+                ],
+                "txMessages": [
+                ],
+                "policies": [20008],
+                "description": "RMR data port for example container"
+            }
+        ]
+    },
+    "rmr": {
+        "protPort": "tcp:4560",
+        "maxSize": 2072,
+        "numWorkers": 1,
+        "rxMessages": [
+          "RIC_INDICATION",
+          "A1_POLICY_REQ",
+          "RIC_HEALTH_CHECK_RESP"
+        ],
+        "txMessages": [
+          "A1_POLICY_RESP",
+          "A1_POLICY_QUERY",
+          "RIC_HEALTH_CHECK_RESP"
+        ],
+    "policies": [20008]
+    },
+    "controls": {
+      "rmr_routing_needed": false,
+      "meid": "gnb123456",
+      "ran_function_id": 1231,
+      "action_definition": [
+        11, 12, 13, 14, 15
+      ],
+      "action_id": 1,
+      "action_type": "policy",
+      "subsequent_action": {
+        "subsequent_action_type": "continue",
+        "time_to_wait": "w10ms"
+      }
+    },
+    "db" : {
+            "waitForSdl": false
+    }
+}

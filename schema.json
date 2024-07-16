@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#/controls",
+  "type": "object",
+  "title": "Controls Section Schema",
+  "required": [
+    "meid",
+    "ran_function_id"
+  ],
+  "properties": {
+    "meid": {
+      "$id": "#/properties/controls/items/properties/meid",
+      "type": "string",
+      "default": "gnb123456",
+      "title": "E2 Node Managed Entity ID",
+      "examples": [
+        "gnbABCDEF", "enbMNOPQR"
+      ]
+    },
+    "ran_function_id": {
+      "$id": "#/properties/controls/items/properties/ran_function_id",
+      "type": "integer",
+      "title": "E2 Node RAN Function ID",
+      "default": "1231"
+    }
+  }
+}
