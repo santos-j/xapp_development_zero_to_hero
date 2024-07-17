@@ -44,6 +44,16 @@ def config_handler(self, rmr_xapp, config):
 
 # Function called after the constructor
 def _post_init(self, rmr_xapp):
+  # Wait while the xApp is registered
+  sleep(5)
+
+  # Check if the config file isn't valid and stop 
+  if not bool(self._config_data) or not self._keep_registration:
+    # Log config file path
+    rmr_xapp.logger.error("Could not load config file" + str(self._config_path)) 
+    # Stop the xApp
+    rmr_xapp.stop()
+  
   # Create a class attribute
   rmr_xapp.callback_counter = 0
   # Set the log level of the xApp
