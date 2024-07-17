@@ -74,6 +74,13 @@ def _entrypoint(self, xapp):
 
       # Save data the current value on persistent storage
       xapp.sdl.set(namespace, entry, current_value)
+
+      # Finds key used in a shared namespace
+      ue_key = xapp.sdl.find("shared_ns", "ue_list")
+      # Reads value from a shared namespace
+      ue_list = xapp.sdl.get("shared_ns", ue_key)
+      # Deletes entry from shared namespace
+      xapp.sdl.delete("shared_ns", ue_key)
       
       # Check for incoming messages
       for (summary, msg_buf) in xapp.rmr_get_messages():
