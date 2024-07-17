@@ -1,0 +1,8 @@
+# Example RMR route table
+newrt|start
+mse|20011|-1|service-ricplt-a1mediator-rmr.ricplt
+mse|20012|-1|service-ricplt-a1mediator-rmr.ricplt
+mse|30001|-1|service-ricxapp-A-rmr.ricxapp
+mse|30002|-1|service-ricxapp-B-rmr.ricxapp
+mse|12040|200| %meid
+newrt|end
