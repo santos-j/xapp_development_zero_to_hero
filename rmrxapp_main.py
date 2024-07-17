@@ -10,7 +10,7 @@ from ricxappframe.xapp_rest import initResponse
 from ricxappframe.xapp_subscribe import NewSubscriber
 
 # Import PyCrate's representaton of the KPM SM
-from asn1.kpm import *
+from ..asn1.kpm import *
 
 # O-RAN Default mtypes
 A1_POLICY_QUERY = 20012
