@@ -12,6 +12,13 @@ from ricxappframe.xapp_subscribe import NewSubscriber
 # Import PyCrate's representaton of the KPM SM
 from asn1.kpm import *
 
+# O-RAN Default mtypes
+A1_POLICY_QUERY = 20012
+A1_POLICY_REQ = 20010
+A1_POLICY_RESP = 20011
+SUBSCRIPTION_REQ = 12011
+RIC_INDICATION = 12050
+
 # Initialize the xApp
 def __init__(self):
   # Register signal handlers
