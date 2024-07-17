@@ -79,7 +79,7 @@ def signal_handler(self, sig, frame):
   self._rmr_xapp.stop()
 
 # Example of a default message callback
-def _default_message_handler(self, xapp, summary, msg_buf):
+def _default_message_handler(self, rmrxapp, summary, msg_buf):
   # Logging incoming message types
   xapp.logger.info("Handler called for mtype: " + str(summary[rmr.RMR_MS_MSG_TYPE]))
   # Logging incoming message contents
@@ -91,7 +91,7 @@ def _default_message_handler(self, xapp, summary, msg_buf):
   # Free allocated memory
   xapp.rmr_free(msg_buf)
 
-def _policy_request_handler(self, xapp, summary, msg_buf):
+def _policy_request_handler(self, rmrxapp, summary, msg_buf):
   # Clear message buffer
   self._rmr_xapp.rmr_free(msg_buf)
 
@@ -218,7 +218,7 @@ def _subscription_notif(self, name, path, data, ctype):
   return response
 
 # Callback to Handle Indication Messages
-def _indication_handler(self, xapp, summary, msg_buf):
+def _indication_handler(self, rmrxapp, summary, msg_buf):
   # Get Message Payload
   raw_data = summary[rmr.RMR_MS_PAYLOAD]
 
