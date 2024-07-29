@@ -8,7 +8,7 @@
             "image": {
                 "registry": "registry.cluster.local:5001",
                 "name": "examplexapp",
-                "tag": "1.0.0
+                "tag": "1.0.0"
             }
         }
     ],
