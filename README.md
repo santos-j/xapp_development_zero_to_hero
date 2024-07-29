@@ -9,7 +9,7 @@ Please see the repository structure below:
 3. [Python representations of ASN.1](/asn1/) (from the E2AP, E2SM, and KPM specifications)
 4. [Command cheatsheet](/example_commands/) (for Docker, Kubernetes, and dms_cli to interface with the AppMgr)
 
-Each link provides additional information about the specific resources. (WIP)
+Each link provides additional information about the specific resources.
 
 
 This repository serves as a companion to our tutorial paper:
