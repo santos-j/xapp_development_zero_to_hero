@@ -22,7 +22,7 @@ For more information and context about this repository and the online resources 
 If you make use of the examples in this repository in your work, please cite our tutorial paper as follows:
 
 ```
-@article{polese2022understanding,
+@article{santos2024managing,
   title={{Managing O-RAN Networks: xApp Development from Zero to Hero}}, 
   author={Santos, Joao and Huff, Alexandre and Campos, Dante and V. Cardoso, Kleber and B. Both, Cristiano and A.
 DaSilva, Luiz},
