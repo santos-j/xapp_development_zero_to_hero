@@ -19,6 +19,18 @@ preprint arXiv:2407.09619, 2024.
 
 For more information and context about this repository and the online resources therein, check our preprint manuscript on ArXiv: [https://arxiv.org/abs/2407.09619](https://arxiv.org/abs/2407.09619).
 
+If you make use of the examples in this repository in your work, please cite our tutorial paper as follows:
+
+```
+@article{polese2022understanding,
+  title={{Managing O-RAN Networks: xApp Development from Zero to Hero}}, 
+  author={Santos, Joao and Huff, Alexandre and Campos, Dante and V. Cardoso, Kleber and B. Both, Cristiano and A.
+DaSilva, Luiz},
+  journal={arXiv preprint arXiv:2407.09619},
+  year={2024}
+}
+```
+
 Note that we leverage the Python xApp Framework from the [O-RAN Software Community](https://o-ran-sc.org/) to develop xApps. For more information about it, please check its [official documentation](https://docs.o-ran-sc.org/projects/o-ran-sc-ric-plt-xapp-frame-py/en/latest/).
 In addition, we leverage PyCrate to create the representations of ASN.1 in Python. For information and examples about it, please check its [official repository](https://github.com/pycrate-org/pycrate).
 
